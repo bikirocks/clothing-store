@@ -23,7 +23,7 @@ const Navigation = () => {
 
     return (
       <Fragment>
-      <NavigationContainer>
+      <NavigationContainer >
         <LogoContainer to='/'>
           <CrwnLogo />
         </LogoContainer>

@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import FormInput from "../form-input/form-input.component";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
@@ -38,14 +41,24 @@ const SignInForm = () => {
                 email,
                 password
             );
+
+            await createUserDocumentFromAuth(user, { email, password });
+            toast("Successfully Login", {
+              type: "success",
+            });
+
             resetFormFields();  
         } catch(error) {
             switch (error.code) {
                 case 'auth/wrong-password':
-                    alert('incorrect password for email');
+                    toast("Password not found!", {
+                        type: "error",
+                      });
                     break;
                 case 'auth/user-not-found' :
-                    alert('no user associated with this email');
+                    toast("Email do not match!", {
+                        type: "error",
+                      });
                     break;
                 default:
                     console.log(error);      
@@ -60,6 +73,8 @@ const SignInForm = () => {
     };
 
     return (
+        <>
+        <ToastContainer />
         <SignInContainer>
             <h2>Already have an account?</h2>
             <span> Sign In with your email and password</span>
@@ -90,6 +105,7 @@ const SignInForm = () => {
                 </ButtonsContainer>
             </form>
         </SignInContainer>
+        </>
     );
 };
 
