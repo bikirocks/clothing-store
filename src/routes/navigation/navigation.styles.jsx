@@ -16,6 +16,11 @@ export const NavigationContainer = styled.div`
   bottom: 0;
   left: 0;
   z-index: 1;
+
+  @media screen and (max-width: 800px) {
+    position: absolute;
+  }  
+
 `;
 
 export const LogoContainer = styled(Link)`
