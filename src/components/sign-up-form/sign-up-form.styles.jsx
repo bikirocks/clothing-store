@@ -15,8 +15,8 @@ export const SignUpContainer = styled.div`
     width: 300px;
     height: 100px;
     h2 {
-      margin: -10px 0;
-      margin-top: 310px;
+      margin: 10px 0;
+      margin-top: 370px;
     }
   }
 

@@ -17,21 +17,21 @@ export const NavigationContainer = styled.div`
   left: 0;
   z-index: 1;
 
-  // @media screen and (max-width: 800px) {
-  //   height: 70px;
-  //   width: 100%;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   margin-bottom: 25px;
+  @media screen and (max-width: 800px) {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
 
-  //   position: fixed;
-  //   background: linear-gradient(to right, rgb(200, 200, 200), rgb(127, 127, 127));
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   z-index: 1;
-  // }  
+    position: fixed;
+    background: linear-gradient(to right, rgb(200, 200, 200), rgb(127, 127, 127));
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }  
 
 `;
 
