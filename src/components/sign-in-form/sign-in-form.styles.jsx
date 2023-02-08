@@ -9,13 +9,14 @@ export const SignInContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 2000px;
     padding: 0 500px 0 0px;
     flex-direction: column;
     h2 {
-      margin: 0px 0;
+      margin: -10px 0;
     }
   }
 
