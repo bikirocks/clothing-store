@@ -24,7 +24,7 @@ export const NavigationContainer = styled.div`
     justify-content: space-between;
     margin-bottom: 25px;
 
-    position: fixed;
+    position: absolute;
     background: linear-gradient(to right, rgb(200, 200, 200), rgb(127, 127, 127));
     top: 0;
     right: 0;
@@ -48,13 +48,10 @@ export const NavLinks = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  // @media screen and (max-width: 800px) {
-  //   width: 50%;
-  //   height: 100%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: flex-end;
-  // }
+  @media screen and (max-width: 800px) {
+    // position:relative;
+    //right:530px;
+  }
 `;
 
 export const NavLink = styled(Link)`
